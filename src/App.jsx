@@ -16,9 +16,9 @@ function App() {
       const dateB = new Date(b.date);
 
       if (dateB - dateA !== 0) {
-        return dateB - dateA; // latest date first
+        return dateB - dateA; 
       }
-      return b.views - a.views; // if same date → higher views first
+      return b.views - a.views; 
     });
 
     setData(sorted);
@@ -27,9 +27,9 @@ function App() {
   const sortByViews = () => {
     const sorted = [...data].sort((a, b) => {
       if (b.views - a.views !== 0) {
-        return b.views - a.views; // higher views first
+        return b.views - a.views; 
       }
-      return new Date(b.date) - new Date(a.date); // if same views → latest date first
+      return new Date(b.date) - new Date(a.date); 
     });
 
     setData(sorted);
